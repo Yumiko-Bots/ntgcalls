@@ -160,7 +160,7 @@ def get_os_cmake_args():
             os.mkdir(TOOLS_PATH)
 
         install_cmake(CMAKE_VERSION)
-        if platform.processor() != 'aarch64':
+        if platform.machine() != 'aarch64':
             install_clang(CLANG_VERSION)
             clang_c = Path(clang_path(), 'bin', 'clang')
             clang_cxx = Path(clang_path(), 'bin', 'clang++')
